@@ -172,14 +172,14 @@ jobs:
           NAPARI_TEST_SUBSET: qt
 
       - name: Upload pytest timing reports as json
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: upload pytest timing reports as json
           path: |
             ./report-*.json
 
       - name: Upload coverage data
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: ${{ inputs.coverage == 'cov' }}
         with:
           name: coverage reports
